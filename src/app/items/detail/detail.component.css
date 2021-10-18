@@ -1,0 +1,5 @@
+.col-scrollable-500 {
+    /* display: flex; // IE10/11 */
+    height: 500px;
+    overflow-y: auto;
+}

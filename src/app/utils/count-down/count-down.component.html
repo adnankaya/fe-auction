@@ -1,0 +1,21 @@
+<ng-container *ngIf="timeDifference; else elseblock">
+    <div class="timer" *ngIf="timeDifference > 0; else closed">
+        <h4 class="text-muted"> Bidding Closes After </h4>
+        <span id="days"> {{daysToDday}} </span>Day(s)
+        <span id="hours"> {{hoursToDday}} </span>Hrs
+        <span id="minutes"> {{minutesToDday}} </span>Min
+        <span id="seconds"> {{secondsToDday}} </span>S
+    </div>
+    <ng-template #closed>
+        <h4 class="alert alert-danger text-center">
+            <strong>Bidding Closed</strong>
+        </h4>
+    </ng-template>
+</ng-container>
+<ng-template #elseblock>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</ng-template>

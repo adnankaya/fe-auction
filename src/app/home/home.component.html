@@ -1,0 +1,13 @@
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="loggedIn">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a class="nav-item nav-link btn btn-sm" aria-disabled="true">{{currentUser.username}}</a>
+        <a class="nav-item nav-link btn btn-sm" (click)="logout()">Logout</a>
+    </div>
+</nav>
+<!-- main app container -->
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
